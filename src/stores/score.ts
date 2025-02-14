@@ -1,4 +1,12 @@
 import { defineStore } from "pinia";
+import debounce from "lodash.debounce";
+import { updateScore } from "@/api/app";
+
+const debounceUpdateScore = debounce(updateScore, 500);
+
+// const debounced = debounce((score) => {
+//   console.log("score", score);
+// }, 500);
 
 const baseLevelScore = 25;
 
@@ -37,7 +45,7 @@ function computeLevelByScore(score) {
 // TODO переписать
 export const useScoreStore = defineStore("score", {
   state: () => ({
-    score: 42,
+    score: 0,
   }),
   getters: {
     level: (state) => computeLevelByScore(state.score),
@@ -52,6 +60,8 @@ export const useScoreStore = defineStore("score", {
   actions: {
     add(score = 1) {
       this.score += score;
+
+      debounceUpdateScore(this.score);
     },
     setScore(score) {
       this.score = score;
