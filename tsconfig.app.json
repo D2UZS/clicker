@@ -6,13 +6,29 @@
       "@/*": ["./src/*"]
     },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-
-    /* Linting */
+    "types": ["vite/client"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["env.d.ts", "src/**/*.ts", "src/**/*.vue", "src/**/*.scss"],
+  "paths": {
+    // "@fields/*": ["./src/components/fields/*"],
+    // "@components/*": ["./src/components/*"],
+    // "@views/*": ["./src/views/*"],
+    // "@static/*": ["./src/static/*"],
+    // "@utils/*": ["./src/utils/*"],
+    // "@hooks/*": ["./src/hooks/*"],
+    // "@types": ["./src/types/index.ts"],
+    // "@assets/*": ["./src/assets/*"],
+    // "@constants/*": ["./src/constants/*"],
+    // "@router/*": ["./src/router/index.ts"],
+    // "@style/mixins": ["./src/assets/styles/mixins/index.scss"],
+    // "@style/utility-classes/*": ["./src/assets/styles/utility-classes/*"],
+    // "@style/animations/*": ["./src/assets/styles/animations/*"],
+    "@/*": ["./src/*"]
+  }
 }

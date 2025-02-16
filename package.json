@@ -10,16 +10,19 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.48.1",
-    "lodash.debounce": "^4.0.8",
     "pinia": "^3.0.1",
+    "remeda": "^2.20.1",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
+    "sass-embedded": "^1.85.0",
     "typescript": "~5.7.2",
     "vite": "^6.1.0",
-    "vue-tsc": "^2.2.0"
+    "vite-plugin-vue-devtools": "^7.7.2",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vue-tsc": "^2.2.2"
   }
 }
